@@ -1,9 +1,13 @@
 class Tile
+    attr_reader :value
 
-
-    def initialize(value, given)
+    def initialize(value)
         @value = value
-        @given = given
+        if value == 0
+            @given = false
+        else
+            @given = true
+        end
     end
 
     def to_s
